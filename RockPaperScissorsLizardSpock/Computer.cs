@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissorsLizardSpock
 {
-    class Computer
+    class Computer : Player
     {
+        // member variables (HAS A)
 
 
 
 
-        public string GenerateRandomGesture()
+        // constructor
+        public Computer()
         {
-           
+            name = "Computer";
+        }
+
+
+
+        // member methods (CAN DO)
+        public override void ChooseGesture()
+        {
+            //computer needs to be able to randomly pick a gesture from the list
         }
     }
 }
