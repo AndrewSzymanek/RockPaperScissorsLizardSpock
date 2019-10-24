@@ -11,8 +11,6 @@ namespace RockPaperScissorsLizardSpock
 
         // member variables (HAS A)
 
-        //inherits Player member variables(score, name, and list of gestures)
-
         // constructor
         public Human()
         {
@@ -32,9 +30,11 @@ namespace RockPaperScissorsLizardSpock
         {
             Console.WriteLine("Please enter a gesture from the following: 'rock', 'paper', 'scissors', 'lizard', 'spock'");
             string chosenGesture = Console.ReadLine();
-
-            return chosenGesture;
-            //need to specify how the human is going to choose from the list of gestures
+           
+                return chosenGesture;
+            
+           
+            
         }
     }
 }

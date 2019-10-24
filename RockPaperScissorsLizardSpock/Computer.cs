@@ -11,7 +11,7 @@ namespace RockPaperScissorsLizardSpock
         // member variables (HAS A)
         private Random randomGesture;
 
-        //inherits Player member variables(score, name, and list of gestures)
+       
 
 
 
@@ -31,7 +31,7 @@ namespace RockPaperScissorsLizardSpock
             string chosenGesture = gestures[randomNum];
             return chosenGesture;
 
-            //computer needs to be able to randomly pick a gesture from the list
+            
         }
         public override void ChooseName()
         {

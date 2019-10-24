@@ -86,6 +86,7 @@ namespace RockPaperScissorsLizardSpock
 
         public void CompareGestures(string player1Gesture, string player2Gesture)
         {
+           
             if (player1Gesture == player2Gesture)
             {
                 Console.WriteLine("It's a tie!");
@@ -164,7 +165,8 @@ namespace RockPaperScissorsLizardSpock
                                 player2.score++;
                                 break;
                         }
-                        break;
+                    
+                    break;
 
                 }
             }
