@@ -70,22 +70,93 @@ namespace RockPaperScissorsLizardSpock
 
         }
 
-        public void CompareGestures(string Gesture1, string Gesture2)
+        public void CompareGestures(string player1Gesture, string player2Gesture)
         {
-            Gesture1 = player1Gesture;
-            Gesture2 = player2Gesture;
-            if( player1Gesture = rock)
-
+            if (player1Gesture == player2Gesture)
+            {
+                Console.WriteLine("It's a tie!);
             }
-           
-            //switch case?
 
+            else if (player1Gesture != player2Gesture)
+            {
+                switch (player1Gesture)
+                {
+                    case "rock":
+                        switch (player2Gesture)
+                        {
+                            case "scissors":
+                                player1.score++;
+                                break;
+                            case "lizard":
+                                player1.score++;
+                                break;
+                            default:
+                                player2.score++;
+                                break;
+                        }
+                        break;
+                    case "paper":
+                        switch (player2Gesture)
+                        {
+                            case "rock":
+                                player1.score++;
+                                break;
+                            case "spock":
+                                player1.score++;
+                                break;
+                            default:
+                                player2.score++;
+                                break;
+                        }
+                        break;
+                    case "scissors":
+                        switch (player2Gesture)
+                        {
+                            case "paper":
+                                player1.score++;
+                                break;
+                            case "lizard":
+                                player1.score++;
+                                break;
+                            default:
+                                player2.score++;
+                                break;
+                        }
+                        break;
+                    case "lizard":
+                        switch (player2Gesture)
+                        {
+                            case "paper":
+                                player1.score++;
+                                break;
+                            case "spock":
+                                player1.score++;
+                                break;
+                            default:
+                                player2.score++;
+                                break;
+                        }
+                        break;
+                    case "spock":
+                        switch (player2Gesture)
+                        {
+                            case "rock":
+                                player1.score++;
+                                break;
+                            case "scissors":
+                                player1.score++;
+                                break;
+                            default:
+                                player2.score++;
+                                break;
+                        }
+                        break;
 
-
-
-            //player1.score = score++;
-            //player2.score = score++;
-        }
+                }
+            }
+          
         
+            }
+        }
     }
 }
