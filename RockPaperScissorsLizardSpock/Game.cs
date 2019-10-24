@@ -17,25 +17,22 @@ namespace RockPaperScissorsLizardSpock
         // constructor
 
         public Game() {
-            player1 = new Human();
-            player2 = new Human();
-            
-
-
+           
+           
         }
 
 
         // member methods (CAN DO)
 
-
         public void RunGame()
         {
 
-            //display rules
+            Rules();
+            string playersResult = SingleOrMultiPrompt();
             CreatePlayers(playersResult);
-            player1.ChooseGesture();
-            player2.ChooseGesture();
-
+            string player1Gesture = player1.ChooseGesture();
+            string player2Gesture = player2.ChooseGesture();
+            CompareGestures(player1Gesture, player2Gesture);
         }
         public void Rules()
         {
@@ -43,12 +40,14 @@ namespace RockPaperScissorsLizardSpock
         }
 
         
-        public void SingleOrMultiPrompt()
+        public string SingleOrMultiPrompt()
         {
             Console.WriteLine("Would you like to play against a computer buddy or a human buddy? Answer 'human' or 'computer'.");
             string playerResult = Console.ReadLine();
 
-            CreatePlayers(playerResult);
+           
+            return playerResult;
+            
             
         }
 
@@ -64,11 +63,23 @@ namespace RockPaperScissorsLizardSpock
                 player1 = new Human();
                 player2 = new Human();
             }
+            player1.ChooseName();
+            player2.ChooseName();
 
         }
 
-      
+        public void CompareGestures(string Gesture1, string Gesture2)
+        {
 
+           
+            //switch case?
+
+
+
+
+            //player1.score = score++;
+            //player2.score = score++;
+        }
         
     }
 }

@@ -25,9 +25,10 @@ namespace RockPaperScissorsLizardSpock
 
 
         // member methods (CAN DO)
-        public virtual void ChooseGesture()
-        {
-            //can stay empty since it's virtual and will be overridden
-        }
+        public abstract string ChooseGesture();
+
+
+        public abstract void ChooseName();
+        
     }
 }

@@ -27,11 +27,14 @@ namespace RockPaperScissorsLizardSpock
             //adds 1 to someone's score if not a tie
 
             //check if score has gotten to best 2/3(loop to check condition and keep playing or stop)
-            
 
 
-            Game game = new Game();
-            game.RunGame();
+
+            //Game game = new Game();
+            //game.RunGame();
+
+            Human human = new Human();
+            human.ChooseName();
 
           
 
