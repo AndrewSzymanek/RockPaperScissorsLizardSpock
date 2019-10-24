@@ -35,7 +35,7 @@ namespace RockPaperScissorsLizardSpock
         }
         public override void ChooseName()
         {
-            name = "Robot";
+            name = "The Iron Giant";
         }
     }
 }

@@ -34,12 +34,12 @@ namespace RockPaperScissorsLizardSpock
             while(player1.score <= 2 && player2.score <= 2)
             {
                 string player1Gesture = player1.ChooseGesture();
-                Console.WriteLine("Player 1 chose" + " " + player1Gesture);
+                Console.WriteLine(player1.name + " "+  "chose:" + " " + player1Gesture);
                 string player2Gesture = player2.ChooseGesture();
-                Console.WriteLine("Player 2 chose" + " " + player2Gesture);
+                Console.WriteLine(player2.name + " "+ "chose:" + " " + player2Gesture);
                 CompareGestures(player1Gesture, player2Gesture);
-                Console.WriteLine("Player 1 score is: " + player1.score);
-                Console.WriteLine("Player 2 score is: " + player2.score);
+                Console.WriteLine(player1.name + " " + "score is: " + player1.score);
+                Console.WriteLine(player2.name + " " + "score is: " + player2.score);
             }
             if(player1.score == 3 || player2.score == 3)
             {
@@ -52,7 +52,8 @@ namespace RockPaperScissorsLizardSpock
         }
         public void Rules()
         {
-            Console.WriteLine("Play RockPaperScissorsLizardSpock like the Big Bang Theory cast. Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock");
+            Console.WriteLine("Play RockPaperScissorsLizardSpock like the Big Bang Theory cast.");
+            Console.WriteLine("Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock");
         }
 
         
