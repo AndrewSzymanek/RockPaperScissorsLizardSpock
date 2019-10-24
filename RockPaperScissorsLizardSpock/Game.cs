@@ -12,8 +12,7 @@ namespace RockPaperScissorsLizardSpock
         // member variables (HAS A)
         Player player1;
         Player player2;
-        string player1Gesture; //not sure if I want these 
-        string player2Gesture; //
+     
         
 
         // constructor
@@ -32,9 +31,24 @@ namespace RockPaperScissorsLizardSpock
             Rules();
             string playersResult = SingleOrMultiPrompt();
             CreatePlayers(playersResult);
-            string player1Gesture = player1.ChooseGesture();
-            string player2Gesture = player2.ChooseGesture();
-            CompareGestures(player1Gesture, player2Gesture);
+            while(player1.score <= 2 && player2.score <= 2)
+            {
+                string player1Gesture = player1.ChooseGesture();
+                Console.WriteLine("Player 1 chose" + " " + player1Gesture);
+                string player2Gesture = player2.ChooseGesture();
+                Console.WriteLine("Player 2 chose" + " " + player2Gesture);
+                CompareGestures(player1Gesture, player2Gesture);
+                Console.WriteLine("Player 1 score is: " + player1.score);
+                Console.WriteLine("Player 2 score is: " + player2.score);
+            }
+            if(player1.score == 3 || player2.score == 3)
+            {
+                Console.WriteLine("We have a winner!");
+            }
+
+           
+
+
         }
         public void Rules()
         {
@@ -47,7 +61,6 @@ namespace RockPaperScissorsLizardSpock
             Console.WriteLine("Would you like to play against a computer buddy or a human buddy? Answer 'human' or 'computer'.");
             string playerResult = Console.ReadLine();
 
-           
             return playerResult;
             
             
@@ -74,7 +87,7 @@ namespace RockPaperScissorsLizardSpock
         {
             if (player1Gesture == player2Gesture)
             {
-                Console.WriteLine("It's a tie!);
+                Console.WriteLine("It's a tie!");
             }
 
             else if (player1Gesture != player2Gesture)
@@ -159,4 +172,4 @@ namespace RockPaperScissorsLizardSpock
             }
         }
     }
-}
+
