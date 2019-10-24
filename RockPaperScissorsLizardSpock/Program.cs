@@ -30,13 +30,12 @@ namespace RockPaperScissorsLizardSpock
 
 
 
-            //Game game = new Game();
-            //game.RunGame();
+            Game game = new Game();
+            game.RunGame();
 
-            Human human = new Human();
-            human.ChooseName();
 
-          
+
+
 
         }
     }

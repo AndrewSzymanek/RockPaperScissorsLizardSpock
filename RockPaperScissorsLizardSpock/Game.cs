@@ -12,6 +12,8 @@ namespace RockPaperScissorsLizardSpock
         // member variables (HAS A)
         Player player1;
         Player player2;
+        string player1Gesture; //not sure if I want these 
+        string player2Gesture; //
         
 
         // constructor
@@ -36,7 +38,7 @@ namespace RockPaperScissorsLizardSpock
         }
         public void Rules()
         {
-            Console.WriteLine("Play RockPaperScissorsLizardSpock like the Big Bang cast.");
+            Console.WriteLine("Play RockPaperScissorsLizardSpock like the Big Bang Theory cast. Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock");
         }
 
         
@@ -70,7 +72,11 @@ namespace RockPaperScissorsLizardSpock
 
         public void CompareGestures(string Gesture1, string Gesture2)
         {
+            Gesture1 = player1Gesture;
+            Gesture2 = player2Gesture;
+            if( player1Gesture = rock)
 
+            }
            
             //switch case?
 

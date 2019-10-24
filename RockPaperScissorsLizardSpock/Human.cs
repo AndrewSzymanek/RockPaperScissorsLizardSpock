@@ -19,6 +19,15 @@ namespace RockPaperScissorsLizardSpock
             
         }
 
+      
+
+
+        // member methods (CAN DO)
+        public override void ChooseName()
+        {
+            Console.WriteLine("Choose your name");
+            name = Console.ReadLine();
+        }
         public override string ChooseGesture()
         {
             Console.WriteLine("Please enter a gesture from the following: 'rock', 'paper', 'scissors', 'lizard', 'spock'");
@@ -27,12 +36,5 @@ namespace RockPaperScissorsLizardSpock
             return chosenGesture;
             //need to specify how the human is going to choose from the list of gestures
         }
-        public override void ChooseName()
-        {
-            Console.WriteLine("Choose your name");
-            name = Console.ReadLine();
-        }
-
-        // member methods (CAN DO)
     }
 }
