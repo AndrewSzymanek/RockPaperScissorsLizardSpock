@@ -12,14 +12,14 @@ namespace RockPaperScissorsLizardSpock
         // member variables (HAS A)
         Player player1;
         Player player2;
-        Player computer;
+        
 
         // constructor
 
         public Game() {
             player1 = new Human();
             player2 = new Human();
-            computer = new Computer();
+            
 
 
         }
@@ -27,37 +27,44 @@ namespace RockPaperScissorsLizardSpock
 
         // member methods (CAN DO)
 
+
+        public void RunGame()
+        {
+
+            //display rules
+            CreatePlayers(playersResult);
+            player1.ChooseGesture();
+            player2.ChooseGesture();
+
+        }
         public void Rules()
         {
             Console.WriteLine("Play RockPaperScissorsLizardSpock like the Big Bang cast.");
         }
 
-        public void RunGame()
-        {
-            while(player1.score < 2) 
-            {
-
-            }
-
-        }
-        public string SingleOrMultiPrompt()
+        
+        public void SingleOrMultiPrompt()
         {
             Console.WriteLine("Would you like to play against a computer buddy or a human buddy? Answer 'human' or 'computer'.");
-            string result = Console.ReadLine();
+            string playerResult = Console.ReadLine();
 
-            switch (result)
+            CreatePlayers(playerResult);
+            
+        }
+
+        public void CreatePlayers(string playersResult)
+        {
+            if (playersResult == "computer")
             {
-                case "human":
-                    Console.WriteLine("You chose a human buddy.");
-                    break;
-                case "computer":
-                    Console.WriteLine("You chose a computer buddy.");
-                    break;
-                default:
-                    Console.WriteLine("Not a valid response. Enter 'human' or 'computer'.");
-                    break;
+                player1 = new Human();
+                player2 = new Computer();
             }
-            return result;
+                
+            else if(playersResult == "human"){
+                player1 = new Human();
+                player2 = new Human();
+            }
+
         }
 
       
