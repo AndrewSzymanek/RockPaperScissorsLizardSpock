@@ -17,9 +17,7 @@ namespace RockPaperScissorsLizardSpock
             
         }
 
-      
-
-
+     
         // member methods (CAN DO)
         public override void ChooseName()
         {
@@ -28,7 +26,7 @@ namespace RockPaperScissorsLizardSpock
         }
         public override string ChooseGesture()
         {
-            Console.WriteLine("Please enter a number for a gesture from the following: \n1)rock\n2)paper\n3)scissors\n4)lizard\n5)spock");
+            Console.WriteLine(name + ", Please enter a number for a gesture from the following: \n1)rock\n2)paper\n3)scissors\n4)lizard\n5)spock");
             string chosenGesture = "";
             try
             {
@@ -51,10 +49,7 @@ namespace RockPaperScissorsLizardSpock
                 return ChooseGesture();
             }
             //validate user input is gesture from list gestures
-
-            return chosenGesture;
-                     
-            
+            return chosenGesture;                          
         }
     }
 }

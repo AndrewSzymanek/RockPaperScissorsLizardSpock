@@ -22,11 +22,8 @@ namespace RockPaperScissorsLizardSpock
             gestures = new List<string>(){ "rock", "paper", "scissors", "lizard", "spock" };
         }
 
-
-
         // member methods (CAN DO)
         public abstract string ChooseGesture();
-
 
         public abstract void ChooseName();
         

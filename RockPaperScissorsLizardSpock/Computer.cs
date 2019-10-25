@@ -11,10 +11,6 @@ namespace RockPaperScissorsLizardSpock
         // member variables (HAS A)
         private Random randomGesture;
 
-       
-
-
-
         // constructor
         public Computer()
         {
@@ -22,16 +18,12 @@ namespace RockPaperScissorsLizardSpock
             
         }
 
-
-
         // member methods (CAN DO)
         public override string ChooseGesture()
         {
            int randomNum = randomGesture.Next(0, gestures.Count);
             string chosenGesture = gestures[randomNum];
-            return chosenGesture;
-
-            
+            return chosenGesture;           
         }
         public override void ChooseName()
         {
