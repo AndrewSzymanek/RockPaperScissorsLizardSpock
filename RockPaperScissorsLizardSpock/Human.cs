@@ -38,16 +38,17 @@ namespace RockPaperScissorsLizardSpock
             catch(IndexOutOfRangeException)
             {
                 Console.WriteLine("Please enter a number between 1 and 5 representing your choice of gesture.");
-                ChooseGesture();
+                return ChooseGesture();
             }
             catch(FormatException)
             {
                 Console.WriteLine("Please enter a number, not a word.");
-                ChooseGesture();
+                return ChooseGesture();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
+                return ChooseGesture();
             }
             //validate user input is gesture from list gestures
            

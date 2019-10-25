@@ -44,6 +44,7 @@ namespace RockPaperScissorsLizardSpock
             if(player1.score == 3 || player2.score == 3)
             {
                 Console.WriteLine("We have a winner!");
+                
             }
 
            
