@@ -28,14 +28,31 @@ namespace RockPaperScissorsLizardSpock
         }
         public override string ChooseGesture()
         {
-            Console.WriteLine("Please enter a gesture from the following: rock, paper, scissors, lizard, spock");
-            string chosenGesture = Console.ReadLine();
-
-            //verify user input is gesture from list gestures
+            Console.WriteLine("Please enter a number for a gesture from the following: \n1)rock\n2)paper\n3)scissors\n4)lizard\n5)spock");
+            string chosenGesture = "";
+            try
+            {
+                int choice = Int32.Parse(Console.ReadLine());
+                chosenGesture = gestures[choice - 1];
+            }
+            catch(IndexOutOfRangeException)
+            {
+                Console.WriteLine("Please enter a number between 1 and 5 representing your choice of gesture.");
+                ChooseGesture();
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("Please enter a number, not a word.");
+                ChooseGesture();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            //validate user input is gesture from list gestures
            
                 return chosenGesture;
-            
-           
+                     
             
         }
     }
