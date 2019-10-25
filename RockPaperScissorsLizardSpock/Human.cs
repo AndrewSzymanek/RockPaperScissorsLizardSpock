@@ -29,7 +29,7 @@ namespace RockPaperScissorsLizardSpock
             Console.WriteLine(name + ", Please enter a number for a gesture from the following: \n1)rock\n2)paper\n3)scissors\n4)lizard\n5)spock");
             string chosenGesture = "";
             try
-            {
+            {               
                 int choice = Int32.Parse(Console.ReadLine());
                 chosenGesture = gestures[choice - 1];
             }
