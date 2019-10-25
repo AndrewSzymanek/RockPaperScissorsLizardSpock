@@ -68,6 +68,7 @@ namespace RockPaperScissorsLizardSpock
                 player1 = new Human();
                 player2 = new Computer();
                 player1.ChooseName();
+                player2.ChooseName();
             }
             else if (playersResult == "human")
             {
