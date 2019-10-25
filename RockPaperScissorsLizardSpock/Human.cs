@@ -28,8 +28,10 @@ namespace RockPaperScissorsLizardSpock
         }
         public override string ChooseGesture()
         {
-            Console.WriteLine("Please enter a gesture from the following: 'rock', 'paper', 'scissors', 'lizard', 'spock'");
+            Console.WriteLine("Please enter a gesture from the following: rock, paper, scissors, lizard, spock");
             string chosenGesture = Console.ReadLine();
+
+            //verify user input is gesture from list gestures
            
                 return chosenGesture;
             
