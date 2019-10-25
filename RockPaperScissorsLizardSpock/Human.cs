@@ -35,7 +35,7 @@ namespace RockPaperScissorsLizardSpock
                 int choice = Int32.Parse(Console.ReadLine());
                 chosenGesture = gestures[choice - 1];
             }
-            catch(IndexOutOfRangeException)
+            catch(ArgumentOutOfRangeException)
             {
                 Console.WriteLine("Please enter a number between 1 and 5 representing your choice of gesture.");
                 return ChooseGesture();
@@ -47,12 +47,12 @@ namespace RockPaperScissorsLizardSpock
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(e);
                 return ChooseGesture();
             }
             //validate user input is gesture from list gestures
-           
-                return chosenGesture;
+
+            return chosenGesture;
                      
             
         }

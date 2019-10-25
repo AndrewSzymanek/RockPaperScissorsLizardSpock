@@ -22,7 +22,6 @@ namespace RockPaperScissorsLizardSpock
            
         }
 
-
         // member methods (CAN DO)
 
         public void RunGame()
@@ -53,8 +52,8 @@ namespace RockPaperScissorsLizardSpock
         }
         public void Rules()
         {
-            Console.WriteLine("Play RockPaperScissorsLizardSpock like the Big Bang Theory cast.");
-            Console.WriteLine("Rock crushes Scissors, Scissors cuts Paper, Paper covers Rock, Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard, Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock");
+            Console.WriteLine("Play RockPaperScissorsLizardSpock like the Big Bang Theory cast!");
+            Console.WriteLine("Rock crushes Scissors\nScissors cuts Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock");
         }
 
         
@@ -63,9 +62,17 @@ namespace RockPaperScissorsLizardSpock
             Console.WriteLine("Would you like to play against a computer buddy or a human buddy? Answer 'human' or 'computer'.");
             string playerResult = Console.ReadLine();
 
-            return playerResult;
-            
-            
+            if (playerResult == "human" || playerResult == "computer")
+            {
+                return playerResult;
+            }
+            else
+            {
+                Console.WriteLine("Write 'human' or 'computer'.");
+                return SingleOrMultiPrompt();
+            }
+
+
         }
 
         public void CreatePlayers(string playersResult)
@@ -75,14 +82,14 @@ namespace RockPaperScissorsLizardSpock
                 player1 = new Human();
                 player2 = new Computer();
             }
-                
-            else if(playersResult == "human"){
+
+            else if (playersResult == "human")
+            {
                 player1 = new Human();
                 player2 = new Human();
-            }
+            }      
             player1.ChooseName();
             player2.ChooseName();
-
         }
 
         public void CompareGestures(string player1Gesture, string player2Gesture)
@@ -92,7 +99,6 @@ namespace RockPaperScissorsLizardSpock
             {
                 Console.WriteLine("It's a tie!");
             }
-
             else if (player1Gesture != player2Gesture)
             {
                 switch (player1Gesture)
@@ -166,14 +172,10 @@ namespace RockPaperScissorsLizardSpock
                                 player2.score++;
                                 break;
                         }
-                    
-                    break;
-
+                        break;
                 }
-            }
-          
-        
-            }
+            }       
         }
     }
+}
 
